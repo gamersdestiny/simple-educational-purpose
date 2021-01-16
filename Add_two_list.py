@@ -2,7 +2,7 @@ list1 = [1,2,3,4,5,6]
 list2 = [1,2,3,4,5,6] 
 list3 = []
 def addTwoList():
-    print('Adding elemts inside list')
+    print('Adding elements inside list')
     for i in range(len(list1)):   
         list3.append(list1[i]+list2[i])
     print(list3)
