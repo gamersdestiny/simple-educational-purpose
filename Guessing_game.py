@@ -5,16 +5,18 @@ def guessing_game():
     Triedword = ""
     result = False
     Timesgussed = 0
+    midindex = len(Toguess)/2
     print('User 2 find the word... :P You have 3 chances')
 
     while result == False:
-        print(Toguess[0], '_ _ _', Toguess[4], '_ _', Toguess[-1:])
+        print(Toguess[0], '__', Toguess[midindex], '__', Toguess[-1:])
         Triedword = input('Guess the right word: ')
         os.system('cls')
         Timesgussed += 1
         print('Attempt', Timesgussed)
         if Timesgussed == 3:
             print('You are out of chances')
+            print('The correct answer is', Toguess)
             break
         if Toguess != Triedword:
             print('Wrong answer :( Try again')
