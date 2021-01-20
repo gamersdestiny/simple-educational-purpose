@@ -70,7 +70,8 @@ def guessing_game_dual():
         if Toguess != Triedword:
             print('Wrong answer :( Try again')
         if Timesgussed == 3:
-            print('You are out of chances')
+            print('Sorry You are out of chances')
+            print('The answer is', Toguess)
             break
 
 def players_choice():
