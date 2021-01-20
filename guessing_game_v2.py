@@ -1,4 +1,5 @@
 import random
+import os
 def guessing_game_single():
     print('you choosed single player game')
     global Toguess
@@ -49,6 +50,7 @@ def guessing_game_single():
 def guessing_game_dual():
     print('you choosed dual player game')
     Toguess = input("User 1 input the word of atleast 5 words to be guessed: ")
+    os.system('cls")
     Triedword = ""
     result = False
     Timesgussed = 0
@@ -59,6 +61,7 @@ def guessing_game_dual():
         print(Toguess[0], '___', Toguess[midindex], '___', Toguess[-1:])
         Triedword = input('Guess the right word: ')
         print('Attempt', Timesgussed+1)
+        os.system('cls')
         Timesgussed += 1
         if Triedword == Toguess:
             print('That is the correct answer :D')
