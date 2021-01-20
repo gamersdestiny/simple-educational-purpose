@@ -50,7 +50,7 @@ def guessing_game_single():
 def guessing_game_dual():
     print('you choosed dual player game')
     Toguess = input("User 1 input the word of atleast 5 words to be guessed: ")
-    os.system('cls")
+    os.system('cls')
     Triedword = ""
     result = False
     Timesgussed = 0
