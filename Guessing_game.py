@@ -1,5 +1,7 @@
+import os
 def guessing_game():
     Toguess = input("User 1 input the word to be guessed: ")
+    os.system('cls')
     Triedword = ""
     result = False
     Timesgussed = 0
@@ -8,6 +10,7 @@ def guessing_game():
     while result == False:
         print(Toguess[0], '_ _ _', Toguess[4], '_ _', Toguess[-1:])
         Triedword = input('Guess the right word: ')
+        os.system('cls')
         Timesgussed += 1
         print('Attempt', Timesgussed)
         if Timesgussed == 3:
