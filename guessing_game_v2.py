@@ -36,6 +36,7 @@ def guessing_game_single():
         Triedword = input('Guess the right word: ')
         Triedword = Triedword.capitalize()
         print('Attempt', Timesgussed+1)
+        os.system('cls')
         Timesgussed += 1
         if Triedword == Toguess:
             print('That is the correct answer :D')
