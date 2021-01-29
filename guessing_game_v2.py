@@ -8,30 +8,31 @@ def guessing_game_single():
     birds = ['Crow', 'Peacock', 'Dove', 'Sparrow', 'Eagle', 'Ostrich', 'Pigeon',]
     vehicles = ['Motorbike', 'Scooter', 'Skateboard', 'Truck', 'Ambulance', 'Firetruck']
     famous_cities  = ['Paris', 'Newyork', 'France', 'Aagra', 'Egypt']
-    if Toguess == 'Animals' or Toguess == 'animals':
+    if Toguess == 'Animals' or Toguess == 'animals' or Toguess == 'Animal' or Toguess == 'animal':
         print('You choosed Animals')
         findA = random.choice(animals)
         Toguess = findA        
-    elif Toguess == 'Birds' or Toguess =='birds':
+    elif Toguess == 'Birds' or Toguess =='birds' or Toguess == 'bird' or Toguess == 'Bird':
         print('You choosed Birds')
         findB = random.choice(birds)
         Toguess = findB
-    elif Toguess == 'vehicles' or Toguess == 'Vehicles':
+    elif Toguess == 'vehicles' or Toguess == 'Vehicles' or Toguess == 'vechicle' or Toguess == 'Vechicle':
         print('You choosed Vehicles')
         findC = random.choice(vehicles)        
         Toguess = findC        
-    elif Toguess == 'famous cities' or Toguess == 'Famous cities':
+    elif Toguess == 'famous cities' or Toguess == 'Famous cities' or Toguess == 'Famous city' or Toguess == 'famous city':
         print('You choosed Famous places')
         findD = random.choice(famous_cities)        
         Toguess = findD        
     else:
         print('Not a valid choice')
+        return True
     Triedword = ""
     result = False
     Timesgussed = 0
     print('Try to find the word... :P You have 3 chances')
     midindex = int(len(Toguess)/2)
-    while result == False:
+    while result == False and True:
         print(Toguess[0], '___', Toguess[midindex], '___', Toguess[-1:])
         Triedword = input('Guess the right word: ')
         Triedword = Triedword.capitalize()
