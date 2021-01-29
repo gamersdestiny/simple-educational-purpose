@@ -3,24 +3,24 @@ import os
 def guessing_game_single():
     print('you choosed single player game')
     global Toguess
-    Toguess = input("choose Animals or Birds or Vehicles or Famous cities: ")
+    Toguess = input("choose Animals or Birds or Vehicles or Famous cities: ").lower()
     animals = ['Squirrel','Dog','Chimpanzee','Lion','Panda', 'Goat']
     birds = ['Crow', 'Peacock', 'Dove', 'Sparrow', 'Eagle', 'Ostrich', 'Pigeon',]
     vehicles = ['Motorbike', 'Scooter', 'Skateboard', 'Truck', 'Ambulance', 'Firetruck']
     famous_cities  = ['Paris', 'Newyork', 'France', 'Aagra', 'Egypt']
-    if Toguess == 'Animals' or Toguess == 'animals' or Toguess == 'Animal' or Toguess == 'animal':
+    if 'animal' in Toguess:
         print('You choosed Animals')
         findA = random.choice(animals)
         Toguess = findA        
-    elif Toguess == 'Birds' or Toguess =='birds' or Toguess == 'bird' or Toguess == 'Bird':
+    elif 'bird' in Toguess:
         print('You choosed Birds')
         findB = random.choice(birds)
         Toguess = findB
-    elif Toguess == 'vehicles' or Toguess == 'Vehicles' or Toguess == 'vechicle' or Toguess == 'Vechicle':
+    elif 'vechicle' in Toguess:
         print('You choosed Vehicles')
         findC = random.choice(vehicles)        
         Toguess = findC        
-    elif Toguess == 'famous cities' or Toguess == 'Famous cities' or Toguess == 'Famous city' or Toguess == 'famous city':
+    elif 'famous' in Toguess:
         print('You choosed Famous places')
         findD = random.choice(famous_cities)        
         Toguess = findD        
@@ -77,10 +77,10 @@ def guessing_game_dual():
             break
 
 def players_choice():
-    playerchoice = int(input("Select 1 player player 2 player mode: "))
-    if playerchoice == 1:
+    playerchoice = (input("Select 1 player player 2 player mode: "))
+    if 'single' or '1' in playerchoice:
         guessing_game_single()
-    elif playerchoice == 2:
+    elif 'dua' or '1' in playerchoice:
         guessing_game_dual()
     else:
         print("This is not a valid choice")
