@@ -1,5 +1,4 @@
 import random
-import string
 from words import words
 questionWord = random.choice(words)
 dashes = (' _ '*len(questionWord))
