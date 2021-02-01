@@ -35,6 +35,11 @@ def find():
             chances += 1
             lenth -=1
             print(f'Wrong character Try again chances left {lenth}')
+            for letter in questionWord:
+                if letter in userAnswer:
+                    print(letter, end=' ')
+                else:
+                    print(' _ ',end='')
     else:
         print(f'You are out of chances. The answer is {questionWord}')
 
