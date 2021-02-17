@@ -77,7 +77,7 @@ def guessing_game_dual():
             break
 
 def players_choice():
-    playerchoice = (input("Select 1 player player 2 player mode: "))
+    playerchoice = (input("Select 1 player 2 player mode: "))
     if 'single' in playerchoice or playerchoice == '1':
         guessing_game_single()
     elif 'dual' in playerchoice or playerchoice == '2':
