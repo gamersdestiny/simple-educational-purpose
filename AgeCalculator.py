@@ -1,8 +1,9 @@
 import datetime
+import re
 
 today = datetime.datetime.today()
 userBday = input('Enter your date of birth in DD/MM/YYYY format')
-sBday = userBday.split('/')
+sBday = re.split('[,./-]', userBday)
 Jbday = ""
 Ajoined = Jbday.join(sBday)
 Sjoined = ''
