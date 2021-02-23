@@ -12,12 +12,20 @@ if ' ' in userBday:
 
 def ChangeToDate():
     if len(Ajoined) == 8:
-        bdd = datetime.datetime.strptime(Ajoined, '%d%m%Y')
-        age = today - bdd
+        try:
+            bdd = datetime.datetime.strptime(Ajoined, '%d%m%Y')
+            age = today - bdd
+        except ValueError:
+            print('Invalid date')
+            return
         print(f'your are {age.days/365 :.2f} years old')
     elif len(Sjoined) == 8:
-        bdd1 = datetime.datetime.strptime(Sjoined, '%d%m%Y')
-        age1 = today - bdd1
+        try:
+            bdd1 = datetime.datetime.strptime(Sjoined, '%d%m%Y')
+            age1 = today - bdd1
+        except ValueError:
+            print('Invalid date')
+            return
         print(f'your are {age1.days/365 :.2f} years old')
     elif len(Ajoined) != 8:
         print('you have entered invalid format date')
